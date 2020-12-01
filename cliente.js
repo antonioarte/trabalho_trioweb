@@ -1,8 +1,8 @@
 class Cliente {
     constructor(){
-        this.clientes = localStorage.getItem('tbClientes') === null
+        this.clientes = localStorage.getItem("tbClientes") === null
                         ? []
-                        : JSON.parse(localStorage.getItem('tbClientes'))
+                        : JSON.parse(localStorage.getItem("tbClientes"))
     }
     /*salva(cliente){
          this.clientes.push(cliente) //adiciona um novo elemento ao array
@@ -10,13 +10,46 @@ class Cliente {
          localStorage.setItem('tbClientes', JSON.stringify(this.clientes)) 
     }*/
 
+    /*salva(cliente) {
+        this.clientes.push(cliente)
+        localStorage.setItem("tbClientes", JSON.stringify(this.clientes))
+        alert('Cliente salvo com sucesso!')
+        this.limpa()
+        return true
+    }*/
+
     salva(cliente) {
+        {
+            this.apaga(cliente.codigo) 
+        }
         this.clientes.push(cliente)
         localStorage.setItem("tbClientes", JSON.stringify(this.clientes))
         alert('Cliente salvo com sucesso!')
         this.limpa()
         return true
     }
+
+    apaga(codigo){
+        let index = this.clientes.findIndex(cliente=> cliente.codigo == codigo)
+        this.clientes.splice(index, 1) //splice remove o item do índice do array
+        localStorage.setItem('tbClientes',JSON.stringify(this.clientes))
+        cliente.atualiza()
+    }
+
+    limpa(){
+        document.getElementById('nome').value = ''
+        document.getElementById('rg').value = ''
+        document.getElementById('datadenascimento').value = ''
+        document.getElementById('endereco').value = ''
+        document.getElementById('cidade').value = ''
+        document.getElementById('cpf').value = ''
+        document.getElementById('cep').value = ''
+        document.getElementById('uf').value = ''
+        document.getElementById('email').value = ''
+        document.getElementById('observacoes').value = ''
+    }
+
+
 
   
     edita(cliente){
@@ -35,12 +68,7 @@ class Cliente {
         
     }
 
-    apaga(codigo){
-        let index = this.clientes.findIndex(cliente=> cliente.codigo == codigo)
-        this.clientes.splice(index, 1) //splice remove o item do índice do array
-        localStorage.setItem('tbClientes',JSON.stringify(this.clientes))
-        cliente.atualiza()
-    }
+    
     lista(){
         const listagem = this.clientes.map((cliente) => (
             `<tr>   
