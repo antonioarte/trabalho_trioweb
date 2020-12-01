@@ -20,7 +20,7 @@ class Cliente {
 
     salva(cliente) {
         {
-            this.apaga(cliente.codigo) 
+        this.apaga(cliente.codigo) 
         }
         this.clientes.push(cliente)
         localStorage.setItem("tbClientes", JSON.stringify(this.clientes))
@@ -41,16 +41,15 @@ class Cliente {
         document.getElementById('rg').value = ''
         document.getElementById('datadenascimento').value = ''
         document.getElementById('endereco').value = ''
+        document.getElementById('bairro').value = ''
         document.getElementById('cidade').value = ''
+        document.getElementById('celular').value = ''
         document.getElementById('cpf').value = ''
         document.getElementById('cep').value = ''
         document.getElementById('uf').value = ''
         document.getElementById('email').value = ''
         document.getElementById('observacoes').value = ''
     }
-
-
-
   
     edita(cliente){
         document.getElementById('nome').value = cliente.nome
