@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Geral</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="shortcut icon" href="warranty-bosch-white.png">
+</head>
+<body>
+    <div class="log">
+        <img class="logo"  src="workers.png">
+    </div>
+    <div class="menu">
+        <a class="Clientes" href="index.html">Clientes</a>
+        <a class="produtos" href="Clientes.html">Produtos</a>
+        <a class="Inicio" href="index1.html">Inicio</a>
+    </div>
+    <div class="form">
+        <form name="formCliente">
+            <fieldset>
+                <legend>Cadastro de Clientes</legend>
+                <div class="form-group">
+    
+                    <label>Nome/Razão Social</label>
+                    <input class="input-control" type="text" size="40" id="nome" placeholder="Digite seu Nome ou Razao Social" />
+
+                    <label class="right-inline">RG/IE</label>
+                    <input class="input-control" type="text" size="10" id="rg" placeholder="Digite seu RG/IE"/> 
+                    <label class="right-inline">Data de Nascimento</label>
+                    <input class="input-control" type="date" size="5" id="datadenascimento" placeholder="DD/MM/AAAA"/>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label >Endereço</label>
+                    <input class="input-control" type="text" size="40" id="endereco" placeholder="Digite seu Endereço"/>
+
+                    <label class="right-inline">bairro</label>
+                    <input class="input-control" type="text" size="20" id="bairro" placeholder="Digite seu bairro" />
+
+                    <label class="right-inline">Cidade</label>
+                    <input class="input-control" type="text" size="30" id="cidade" placeholder="Digite sua Cidade"/>
+                </div>
+                <br>
+                <div class="form-group">
+                      <label >Celular/Telefone</label>
+                        <input class="input-control" type="tel" size="14" id="celular" placeholder="Digite seu Cel./Tel."/>
+
+                        <label >CPF/CNPJ</label>
+                        <input class="input-control" type="text" size="20" id="cpf" placeholder="Digite seu CPF/CNPJ"/>
+
+                       
+
+                        <label class="right-inline">CEP</label>
+                        <input class="input-control" type="text" size="9" id="cep" placeholder="Ex.:00000-000"/>
+    
+                        <label class="right-inline">UF</label>
+                        <input class="input-control" type="text" size="2" id="uf"/> 
+                        <label class="right-inline">E-mail</label>
+                      <input class="input-control" type="email" size="15" id="email" placeholder="Ex.: name@name.com.br" />
+                </div>
+                <br>
+                
+                <div class="form-group">
+
+                    <label>Observações</label>
+                    <textarea class="input_control" size="10" id="observacoes"></textarea>
+
+                </div>
+                <br>
+                <div class="form-group">
+                    <button id="salvar" >💾Salvar</button>
+                    <button id="cancelar">❌Cancelar</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <div id="listagem"></div>
+    
+    
+
+    <footer >
+        <p class="paragrafo">© 2020 Trio Parada Dura, todos os direitos reservados.</p>
+        <p>Desenvolvido por Antônio, Gabriel Pereira e Vitoria </p>
+</footer>
+<script src="cliente.js"></script>
+    <br>
+</body>
+</html>
+
+
+
