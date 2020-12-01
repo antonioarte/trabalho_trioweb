@@ -4,12 +4,21 @@ class Cliente {
                         ? []
                         : JSON.parse(localStorage.getItem('tbClientes'))
     }
-    salva(cliente){
+    /*salva(cliente){
          this.clientes.push(cliente) //adiciona um novo elemento ao array
          alert('Cliente salvo com Sucesso!')
          localStorage.setItem('tbClientes', JSON.stringify(this.clientes)) 
+    }*/
+
+    salva(cliente) {
+        this.clientes.push(cliente)
+        localStorage.setItem("tbClientes", JSON.stringify(this.clientes))
+        alert('Cliente salvo com sucesso!')
+        this.limpa()
+        return true
     }
 
+  
     edita(cliente){
         document.getElementById('nome').value = cliente.nome
         document.getElementById('rg').value = cliente.rg 
@@ -104,7 +113,7 @@ document.getElementById('salvar').onclick = function(){
         cep: document.getElementById('cep').value,
         uf: document.getElementById('uf').value,
         email: document.getElementById('email').value,
-        observacoes: document.getElementById('observacoes').value
+        observacoes: document.getElementById('observacoes').value,
     }
     cliente.salva(registro)
 }
