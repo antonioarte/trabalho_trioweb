@@ -77,7 +77,7 @@ class Cliente {
                 🗑️Apagar </button>
                         
                 <button id='editar' onClick='cliente.edita(${JSON.stringify(cliente)})'>
-                📝 Editar </button>
+                📝Editar </button>
             </td>
                 
              </tr>
