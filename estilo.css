@@ -51,8 +51,19 @@ animation-iteration-count: infinite;
   100% {background-color:rgba(48, 226, 3, 0); left:0px;}
 }
 
+fieldset{
+  border-radius: 25px;
+}
+
+legend{
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 35px;
+}
+
 .form{
   background-image: url("bgfundoX.jpg"); 
+  
     color:  #24ac17;
     
 }
@@ -101,11 +112,13 @@ button{
     min-width: 100px;
     border-radius: 10px;
     cursor: pointer;
+    margin-top: 25px;
+    margin-bottom: 15px;
 }
 
 table.paleBlueRows {
-    border: 1px solid #fcfcfc00;
-    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.424);
+    border: 5px solid black;
     width: 100%;
     height: 200%;
     text-align: center;
@@ -113,23 +126,24 @@ table.paleBlueRows {
     color: #f7f2f2;
   }
   table.paleBlueRows td, table.paleBlueRows th {
-    border: 10px solid #080808;
-    padding: 3px 2px;
+    border: 5px solid black;
+    padding: 2px 2px;
   }
   table.paleBlueRows tbody td {
-    font-size: 13px;
+    font-size: 14px;
+    
   }
   table.paleBlueRows tr:nth-child(even) {
     
   }
   table.paleBlueRows thead {
-    background: #444444;
-    border-bottom: 5px solid #FFFFFF;
+    background: rgb(19, 18, 18);
+    border-bottom: 5px solid black;
   }
   table.paleBlueRows thead th {
-    font-size: 17px;
+    font-size: 15px;
     font-weight: bold;
-    color: #FFFFFF;
+    color: #888888;
     text-align: center;
     border-left: 2px solid #FFFFFF;
   }
@@ -162,12 +176,13 @@ table.paleBlueRows {
 
 }
 footer{
-    bottom: 0;
-    position: fixed;
- text-align: center;
-  height: 100px;
+  bottom: 0;
+  font-size: 13px;
+  position: fixed;
+  text-align: center;
+  height: 70px;
   width: 100%;
   color: rgb(252, 247, 247);
-  background-color: #7e7a7a;
-  background-image: url("bgfundo.jpg");
+  background-color: #1110108a;
+ 
 }

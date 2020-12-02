@@ -4,24 +4,12 @@ class Cliente {
                         ? []
                         : JSON.parse(localStorage.getItem("tbClientes"))
     }
-    /*salva(cliente){
-         this.clientes.push(cliente) //adiciona um novo elemento ao array
-         alert('Cliente salvo com Sucesso!')
-         localStorage.setItem('tbClientes', JSON.stringify(this.clientes)) 
-    }*/
-
-    /*salva(cliente) {
-        this.clientes.push(cliente)
-        localStorage.setItem("tbClientes", JSON.stringify(this.clientes))
-        alert('Cliente salvo com sucesso!')
-        this.limpa()
-        return true
-    }*/
 
     salva(cliente) {
-        {
-        this.apaga(cliente.codigo) 
-        }
+       /*if(document.getElementById('nome').getAttribute('disabled')==='disabled')*/{ //mudei codigo para nome
+            this.apaga(cliente.codigo)
+    }
+
         this.clientes.push(cliente)
         localStorage.setItem("tbClientes", JSON.stringify(this.clientes))
         alert('Cliente salvo com sucesso!')
@@ -96,7 +84,7 @@ class Cliente {
             `
         ))
         return(`<table border='1' class='paleBlueRows'>
-        <caption>Relação de Clientes</caption>
+        <caption> Relação de Clientes </caption>
         <thead>   
             <th>Nome</th>
             <th>Rg/IE</th>
@@ -140,7 +128,7 @@ document.getElementById('salvar').onclick = function(){
         cep: document.getElementById('cep').value,
         uf: document.getElementById('uf').value,
         email: document.getElementById('email').value,
-        observacoes: document.getElementById('observacoes').value,
+        observacoes: document.getElementById('observacoes').value
     }
     cliente.salva(registro)
 }
